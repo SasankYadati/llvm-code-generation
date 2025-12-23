@@ -1,0 +1,6 @@
+# LLVM source (cloned separately)
+llvm-project/
+
+# Build directory
+clang-build/
+

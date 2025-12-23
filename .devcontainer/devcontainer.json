@@ -6,5 +6,9 @@
       "memory": "64gb",
       "storage": "64gb"
     },
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ninja-build lld"
+    "remoteEnv": {
+      "LLVM_SRC": "${containerWorkspaceFolder}/llvm-project",
+      "CLANG_BUILD": "${containerWorkspaceFolder}/clang-build"
+    },
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ninja-build lld && git clone --depth 1 https://github.com/llvm/llvm-project.git"
   }
